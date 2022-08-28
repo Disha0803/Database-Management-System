@@ -17,8 +17,8 @@
 -- where s.person='Bob' and t.person=s.supervisor;
 
 -- [Find ALL the supervisors (direct and indirect) of “Bob"]
-select t.supervisor 
-from supervising as s,supervising as t 
-where s.person='Bob' and s.person=s.supervisor and t.person=s.supervisor;
+select s.supervisor , t.supervisor , u.supervisor ,  v.supervisor
+from supervising as s,supervising as t,supervising as u,supervising as v
+where s.person='Bob' and s.supervisor=t.person and t.supervisor=u.person and u.supervisor=v.person;
 
-select * from supervising;
+-- select * from supervising;
