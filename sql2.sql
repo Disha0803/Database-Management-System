@@ -19,4 +19,33 @@
 
 -- create view themeview as
 -- select theme from books where author like "% %";
-select count(*) from themeview;
+-- select count(*) from themeview;
+
+-- create table scoreboard(
+-- gameID int,
+-- TeamName varchar(30),
+-- Score int,
+-- Day int
+-- );
+
+-- desc scoreboard;
+
+-- insert into scoreboard values(1,"RacerLeague",87,1);
+-- insert into scoreboard values(1,"HeroZ",12,1);
+-- insert into scoreboard values(2,"HeroZ",42,2);
+-- insert into scoreboard values(2,"Legend21",72,2);
+-- insert into scoreboard values(3,"Legend21",90,1);
+
+-- select * from scoreboard;
+
+-- update scoreboard
+-- set gameID=2
+-- where gameID=3;
+
+-- select * from scoreboard;
+
+select gameID, avg(Score) from scoreboard group by Day;
+
+
+
+-- drop table scoreboard;
