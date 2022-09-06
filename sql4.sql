@@ -18,11 +18,16 @@
 -- select * from BookDetails 
 -- where YEAR_PUB=2010 OR AUTHOR_NAME='ULLMAN';
 
-select * from BookDetails 
-where YEAR_PUB=2010 
-UNION 
-select * from BookDetails
-where AUTHOR_NAME='ULLMAN';
+-- select * from BookDetails 
+-- where YEAR_PUB=2010 
+-- UNION 
+-- select * from BookDetails
+-- where AUTHOR_NAME='ULLMAN';
+
+select BOOK_ID, BOOK_TITLE
+from BookDetails
+where AUTHOR_NAME NOT IN ('ULLMAN','KORTH')
+AND (TOTAL_SOLD_COPIES >=18000);
 
 
 

@@ -44,7 +44,7 @@
 
 -- select * from scoreboard;
 
-select gameID, avg(Score) from scoreboard group by Day;
+select Day, avg(Score) from scoreboard group by Day;
 
 
 
